@@ -20,6 +20,11 @@ jobs:
           - windows-latest
         dotnet-version: [6.0.x, 7.0.x, 8.0.x, 9.0.x]
     steps:
+
+      - name: Get variable
+        env:
+         Test: ${{ env.MY_VARIABLE }}
+         run: echo "$Test"
     
       - name: Checkout code
         uses: actions/checkout@v4

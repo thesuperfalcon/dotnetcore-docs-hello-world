@@ -22,10 +22,8 @@ jobs:
     steps:
 
       - name: Get variable
-        env:
-          Test: ${{ env.MY_VARIABLE }}  
         run: |
-          echo "Test value: $Test"    
+          echo "Test value: ${{ env.MY_VARIABLE }}  "    
           
       - name: Checkout code
         uses: actions/checkout@v4
